@@ -8,14 +8,14 @@ export default function ProfileHeader({ profile }: { profile: Profile }) {
       <Image
         src={profile.image}
         alt={`${profile.name} 프로필 사진`}
-        width={160}
-        height={160}
+        width={150}
+        height={150}
         priority
         unoptimized={profile.image.endsWith('.svg')}
-        className="size-36 rounded-full border-2 border-foreground/80 object-cover sm:size-40"
+        className="shadow-avatar size-[150px] rounded-full object-cover ring-4 ring-white/80"
       />
-      <h1 className="mt-6 text-xl font-bold">{profile.name}</h1>
-      <p className="mt-1 text-base text-foreground/70">{profile.bio}</p>
+      <h1 className="mt-7 text-[22px] font-bold tracking-tight">{profile.name}</h1>
+      <p className="mt-2 max-w-[18rem] text-[15px] leading-relaxed text-muted">{profile.bio}</p>
     </header>
   );
 }
